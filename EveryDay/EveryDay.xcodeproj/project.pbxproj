@@ -18,6 +18,7 @@
 		1965BB952669066C00A95E37 /* EveryDayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1965BB942669066C00A95E37 /* EveryDayUITests.m */; };
 		1965BBB42669075400A95E37 /* WRBarrierObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1965BBB32669075400A95E37 /* WRBarrierObject.m */; };
 		1965BBBA2669076400A95E37 /* WRLockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1965BBB92669076400A95E37 /* WRLockObject.m */; };
+		19F9FC5A266A4B2800CCFE84 /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F9FC59266A4B2800CCFE84 /* People.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		1965BBB32669075400A95E37 /* WRBarrierObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRBarrierObject.m; sourceTree = "<group>"; };
 		1965BBB82669076400A95E37 /* WRLockObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRLockObject.h; sourceTree = "<group>"; };
 		1965BBB92669076400A95E37 /* WRLockObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRLockObject.m; sourceTree = "<group>"; };
+		19F9FC58266A4B2800CCFE84 /* People.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
+		19F9FC59266A4B2800CCFE84 /* People.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,7 @@
 		1965BB6C2669066800A95E37 /* EveryDay */ = {
 			isa = PBXGroup;
 			children = (
+				19F9FC57266A4B1400CCFE84 /* About Array */,
 				1965BBA52669067C00A95E37 /* RW */,
 				1965BB6D2669066800A95E37 /* AppDelegate.h */,
 				1965BB6E2669066800A95E37 /* AppDelegate.m */,
@@ -153,6 +157,15 @@
 				1965BBB92669076400A95E37 /* WRLockObject.m */,
 			);
 			path = RW;
+			sourceTree = "<group>";
+		};
+		19F9FC57266A4B1400CCFE84 /* About Array */ = {
+			isa = PBXGroup;
+			children = (
+				19F9FC58266A4B2800CCFE84 /* People.h */,
+				19F9FC59266A4B2800CCFE84 /* People.m */,
+			);
+			path = "About Array";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +300,7 @@
 				1965BB752669066800A95E37 /* ViewController.m in Sources */,
 				1965BB6F2669066800A95E37 /* AppDelegate.m in Sources */,
 				1965BBB42669075400A95E37 /* WRBarrierObject.m in Sources */,
+				19F9FC5A266A4B2800CCFE84 /* People.m in Sources */,
 				1965BB802669066B00A95E37 /* main.m in Sources */,
 				1965BBBA2669076400A95E37 /* WRLockObject.m in Sources */,
 				1965BB722669066800A95E37 /* SceneDelegate.m in Sources */,
