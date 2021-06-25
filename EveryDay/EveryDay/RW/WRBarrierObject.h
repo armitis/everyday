@@ -11,6 +11,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WRBarrierObject : NSObject
 
+- (NSString *)read;
+- (void)write:(NSString *)content;
+
+- (void)test;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)read;
 - (void)write:(NSString *)content;
 
+- (void)test;
+
 @end
 
 NS_ASSUME_NONNULL_END

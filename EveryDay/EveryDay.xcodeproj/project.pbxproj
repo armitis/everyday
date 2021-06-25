@@ -18,6 +18,8 @@
 		1965BB952669066C00A95E37 /* EveryDayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1965BB942669066C00A95E37 /* EveryDayUITests.m */; };
 		1965BBB42669075400A95E37 /* WRBarrierObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1965BBB32669075400A95E37 /* WRBarrierObject.m */; };
 		1965BBBA2669076400A95E37 /* WRLockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1965BBB92669076400A95E37 /* WRLockObject.m */; };
+		19F9489B267C4D8700CCFE84 /* ArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F9489A267C4D8700CCFE84 /* ArrayTest.swift */; };
+		19F948A1267C839400CCFE84 /* ArrayObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F948A0267C839400CCFE84 /* ArrayObject.m */; };
 		19F9FC5A266A4B2800CCFE84 /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F9FC59266A4B2800CCFE84 /* People.m */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,10 @@
 		1965BBB32669075400A95E37 /* WRBarrierObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRBarrierObject.m; sourceTree = "<group>"; };
 		1965BBB82669076400A95E37 /* WRLockObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRLockObject.h; sourceTree = "<group>"; };
 		1965BBB92669076400A95E37 /* WRLockObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRLockObject.m; sourceTree = "<group>"; };
+		19F94899267C4D8000CCFE84 /* EveryDay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EveryDay-Bridging-Header.h"; sourceTree = "<group>"; };
+		19F9489A267C4D8700CCFE84 /* ArrayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTest.swift; sourceTree = "<group>"; };
+		19F9489F267C839400CCFE84 /* ArrayObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayObject.h; sourceTree = "<group>"; };
+		19F948A0267C839400CCFE84 /* ArrayObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrayObject.m; sourceTree = "<group>"; };
 		19F9FC58266A4B2800CCFE84 /* People.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
 		19F9FC59266A4B2800CCFE84 /* People.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +170,10 @@
 			children = (
 				19F9FC58266A4B2800CCFE84 /* People.h */,
 				19F9FC59266A4B2800CCFE84 /* People.m */,
+				19F9489A267C4D8700CCFE84 /* ArrayTest.swift */,
+				19F94899267C4D8000CCFE84 /* EveryDay-Bridging-Header.h */,
+				19F9489F267C839400CCFE84 /* ArrayObject.h */,
+				19F948A0267C839400CCFE84 /* ArrayObject.m */,
 			);
 			path = "About Array";
 			sourceTree = "<group>";
@@ -234,6 +244,7 @@
 				TargetAttributes = {
 					1965BB692669066800A95E37 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					1965BB842669066B00A95E37 = {
 						CreatedOnToolsVersion = 12.4;
@@ -298,8 +309,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1965BB752669066800A95E37 /* ViewController.m in Sources */,
+				19F9489B267C4D8700CCFE84 /* ArrayTest.swift in Sources */,
 				1965BB6F2669066800A95E37 /* AppDelegate.m in Sources */,
 				1965BBB42669075400A95E37 /* WRBarrierObject.m in Sources */,
+				19F948A1267C839400CCFE84 /* ArrayObject.m in Sources */,
 				19F9FC5A266A4B2800CCFE84 /* People.m in Sources */,
 				1965BB802669066B00A95E37 /* main.m in Sources */,
 				1965BBBA2669076400A95E37 /* WRLockObject.m in Sources */,
@@ -475,6 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ZX84L8FH6;
 				INFOPLIST_FILE = EveryDay/Info.plist;
@@ -484,6 +498,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ZZW.EveryDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EveryDay/About Array/EveryDay-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -493,6 +510,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ZX84L8FH6;
 				INFOPLIST_FILE = EveryDay/Info.plist;
@@ -502,6 +520,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ZZW.EveryDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EveryDay/About Array/EveryDay-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -509,6 +529,7 @@
 		1965BB9D2669066C00A95E37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ZX84L8FH6;
@@ -529,6 +550,7 @@
 		1965BB9E2669066C00A95E37 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ZX84L8FH6;
@@ -549,6 +571,7 @@
 		1965BBA02669066C00A95E37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ZX84L8FH6;
 				INFOPLIST_FILE = EveryDayUITests/Info.plist;
@@ -567,6 +590,7 @@
 		1965BBA12669066C00A95E37 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4ZX84L8FH6;
 				INFOPLIST_FILE = EveryDayUITests/Info.plist;
