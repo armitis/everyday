@@ -12,6 +12,7 @@
 #import "NilBlockParamTest.h"
 #import "BlockTestObject.h"
 #import "EveryDay-Swift.h"
+#import "MultipleThreadTest.h"
 
 @interface ViewController ()
 
@@ -20,6 +21,7 @@
 @property (nonatomic, strong) WRBarrierObject *barrierObject;
 @property (nonatomic, strong) NilBlockParamTest *crashObject;
 @property (nonatomic, strong) TestClass *staticMutilpleThreadTest;
+@property (nonatomic, strong) MultipleThreadTest *threadTest;
 
 @end
 
@@ -38,6 +40,13 @@
 //    BlockTestObject *obj = [[BlockTestObject alloc] init];
 //    [obj nestedBlock];
     
+//    [self testStaticMultipleThread];
+    [self.threadTest testIt];
+    
+}
+
+- (void)testStaticMultipleThread
+{
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         for (int i = 0; i < 50000; i++) {
             dispatch_async(dispatch_get_global_queue(0, 0), ^{
@@ -52,7 +61,6 @@
             });
         }
     });
-    
 }
 
 
@@ -95,6 +103,14 @@
         _staticMutilpleThreadTest = [[TestClass alloc] init];
     }
     return _staticMutilpleThreadTest;
+}
+
+- (MultipleThreadTest *)threadTest
+{
+    if (!_threadTest) {
+        _threadTest = [[MultipleThreadTest alloc] init];
+    }
+    return _threadTest;
 }
 
 @end

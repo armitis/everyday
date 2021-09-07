@@ -21,6 +21,7 @@
 		1965BBB42669075400A95E37 /* WRBarrierObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1965BBB32669075400A95E37 /* WRBarrierObject.m */; };
 		1965BBBA2669076400A95E37 /* WRLockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1965BBB92669076400A95E37 /* WRLockObject.m */; };
 		1972CA5426E62F4C00F9A9FA /* StaticMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1972CA5326E62F4C00F9A9FA /* StaticMethod.swift */; };
+		1972CA9E26E7613D00F9A9FA /* MultipleThreadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1972CA9D26E7613D00F9A9FA /* MultipleThreadTest.m */; };
 		19DB70EE26A6ACE20033B4F7 /* CocoaPod.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DB70ED26A6ACE20033B4F7 /* CocoaPod.m */; };
 		19F9489B267C4D8700CCFE84 /* ArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F9489A267C4D8700CCFE84 /* ArrayTest.swift */; };
 		19F948A1267C839400CCFE84 /* ArrayObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F948A0267C839400CCFE84 /* ArrayObject.m */; };
@@ -72,6 +73,8 @@
 		1965BBB82669076400A95E37 /* WRLockObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WRLockObject.h; sourceTree = "<group>"; };
 		1965BBB92669076400A95E37 /* WRLockObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WRLockObject.m; sourceTree = "<group>"; };
 		1972CA5326E62F4C00F9A9FA /* StaticMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticMethod.swift; sourceTree = "<group>"; };
+		1972CA9C26E7613D00F9A9FA /* MultipleThreadTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultipleThreadTest.h; sourceTree = "<group>"; };
+		1972CA9D26E7613D00F9A9FA /* MultipleThreadTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipleThreadTest.m; sourceTree = "<group>"; };
 		19DB70EC26A6ACE20033B4F7 /* CocoaPod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CocoaPod.h; sourceTree = "<group>"; };
 		19DB70ED26A6ACE20033B4F7 /* CocoaPod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CocoaPod.m; sourceTree = "<group>"; };
 		19F94899267C4D8000CCFE84 /* EveryDay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EveryDay-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 				19092A1F26A03E4900046864 /* NilBlockParamTest.h */,
 				19092A2026A03E4900046864 /* NilBlockParamTest.m */,
 				1972CA5326E62F4C00F9A9FA /* StaticMethod.swift */,
+				1972CA9C26E7613D00F9A9FA /* MultipleThreadTest.h */,
+				1972CA9D26E7613D00F9A9FA /* MultipleThreadTest.m */,
 			);
 			path = Crash;
 			sourceTree = "<group>";
@@ -351,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1972CA5426E62F4C00F9A9FA /* StaticMethod.swift in Sources */,
+				1972CA9E26E7613D00F9A9FA /* MultipleThreadTest.m in Sources */,
 				1965BB752669066800A95E37 /* ViewController.m in Sources */,
 				19F9489B267C4D8700CCFE84 /* ArrayTest.swift in Sources */,
 				1965BB6F2669066800A95E37 /* AppDelegate.m in Sources */,
