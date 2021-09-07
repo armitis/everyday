@@ -9,12 +9,17 @@
 #import "WRLockObject.h"
 #import "ArrayObject.h"
 #import "WRBarrierObject.h"
+#import "NilBlockParamTest.h"
+#import "BlockTestObject.h"
+#import "EveryDay-Swift.h"
 
 @interface ViewController ()
 
 @property (nonatomic, strong) WRLockObject *wrLockObject;
 @property (nonatomic, strong) ArrayObject *arrayObject;
 @property (nonatomic, strong) WRBarrierObject *barrierObject;
+@property (nonatomic, strong) NilBlockParamTest *crashObject;
+@property (nonatomic, strong) TestClass *staticMutilpleThreadTest;
 
 @end
 
@@ -26,7 +31,28 @@
     
 //    [self.wrLockObject test];
 //    [self.arrayObject test];
-    [self.barrierObject test];
+//    [self.barrierObject test];
+//    [self.crashObject bar];
+//    NSLog(@"%@", @([self.crashObject foo2]));
+//
+//    BlockTestObject *obj = [[BlockTestObject alloc] init];
+//    [obj nestedBlock];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        for (int i = 0; i < 50000; i++) {
+            dispatch_async(dispatch_get_global_queue(0, 0), ^{
+                NSString *t = [TestClass testWithZoneID:@"America/New_York" time:1630930099646 format:@"yyyy-MM-dd HH:mm:ss"];
+                NSLog(@"%@", t);
+            });
+        }
+        for (int i = 0; i < 50000; i++) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSString *t = [TestClass testWithZoneID:@"America/New_York" time:1630930099646 format:@"yyyy-MM-dd HH:mm:ss"];
+                NSLog(@"%@", t);
+            });
+        }
+    });
+    
 }
 
 
@@ -55,5 +81,20 @@
     return _barrierObject;
 }
 
+- (NilBlockParamTest *)crashObject
+{
+    if (!_crashObject) {
+        _crashObject = [[NilBlockParamTest alloc] init];
+    }
+    return _crashObject;
+}
+
+- (TestClass *)staticMutilpleThreadTest
+{
+    if (!_staticMutilpleThreadTest) {
+        _staticMutilpleThreadTest = [[TestClass alloc] init];
+    }
+    return _staticMutilpleThreadTest;
+}
 
 @end
