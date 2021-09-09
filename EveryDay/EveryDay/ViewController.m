@@ -37,11 +37,11 @@
 //    [self.crashObject bar];
 //    NSLog(@"%@", @([self.crashObject foo2]));
 //
-//    BlockTestObject *obj = [[BlockTestObject alloc] init];
-//    [obj nestedBlock];
+    BlockTestObject *obj = [[BlockTestObject alloc] init];
+    [obj nestedBlock];
     
 //    [self testStaticMultipleThread];
-    [self.threadTest testIt];
+//    [self.threadTest testIt];
     
 }
 

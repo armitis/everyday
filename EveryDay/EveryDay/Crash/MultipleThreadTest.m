@@ -22,7 +22,7 @@
 - (void)testIt
 {
     for (int i = 0; i < 50000; i++) {
-        dispjatch_async(dispatch_get_global_queue(0, 0), ^{
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
             NSObject *obj = [self start];
             NSLog(@"%@", obj);
         });
