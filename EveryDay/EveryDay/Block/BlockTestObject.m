@@ -35,10 +35,10 @@
     
     __weak __typeof(self) weakSelf = self;
     self.a = ^{
-        __strong __typeof(weakSelf) strongSelf = weakSelf;
-        strongSelf.b = ^{
-            __strong __typeof(weakSelf) strongSelf = weakSelf;
-            NSLog(@"%@", strongSelf.data);
+//        __strong __typeof(weakSelf) strongSelf = weakSelf;
+        weakSelf.b = ^{
+//            __strong __typeof(weakSelf) strongSelf = weakSelf;
+            NSLog(@"%@", weakSelf.data);
         };
 //        dispatch_async(dispatch_get_main_queue(), ^{
 //            NSLog(@"%@", self.data);
@@ -46,14 +46,14 @@
         
         
         
-        NSArray *array = @[@1, @2, @3];
-        [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            NSLog(@"%@", weakSelf.data);
-        }];
+//        NSArray *array = @[@1, @2, @3];
+//        [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//            NSLog(@"%@", weakSelf.data);
+//        }];
     };
     
     self.a();
-//    self.b();
+    self.b();
 }
 
 @end
